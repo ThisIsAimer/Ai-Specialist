@@ -131,3 +131,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* set the slider at dashboard */
+.slick-slide>div{
+  margin: 0 2px;
+}
+
