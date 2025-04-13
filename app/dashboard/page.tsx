@@ -1,13 +1,14 @@
 import DashboardSelect from "@/components/general/dashboardSelect";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { use } from "react";
 
 export default async function Dashboardroute() {
     const {getUser} = getKindeServerSession();
     const user = await getUser();
     return (
         <>
-            <div className="text-4xl">
-                this is dashboard
+            <div className="text-4xl font-bold mx-10 mt-5">
+                Hi {user?.given_name}! <span className="text-indigo-600">select your agent!</span>
             </div>
             <div className="mt-10">
                 <DashboardSelect data={data} />

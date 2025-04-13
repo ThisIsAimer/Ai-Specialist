@@ -11,7 +11,7 @@ export default async function Navbar() {
 
 
     return (
-        <nav className="py-2 flex items-center justify-between">
+        <nav className="mb-2 mt-2 flex items-center justify-between">
             <div className="flex items-center gap-10">
                 <Link href="/" className="text-2xl font-bold">
                     <span>
