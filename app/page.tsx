@@ -41,33 +41,40 @@ export default function Home() {
       </div>
       <div className="mt-15 ml-10">
         <div className="text-4xl font-bold mt-3">Get started in 3 simple steps!</div>
-        <div className="flex flex-row justify-evenly items-center gap-4">
-          <div className="flex flex-col items-center border-r-2 border-r-black">
+        <div className="flex flex-row justify-between gap-2 mt-5">
+          { info.map( items => <div className="flex flex-col text-center border-2 border-indigo-600 w-1/3 px-4" key={items.title}>
             <div>
-              Login
+                <div className="text-2xl font-bold">
+                  {items.title}
+                </div>
+                <div className="text-sm mt-4 font-semibold">
+                  {items.discription}
+                </div>
+              </div>
             </div>
-            <div>
-              Sign-up or login for user authentication and security!
-            </div>
-          </div>
-          <div className="flex flex-col items-center ">
-            <div>
-              Select agent
-            </div>
-            <div>
-              Select one of our wide range of AI agents with specialized trompting and training for your use!
-            </div>
-          </div>
-          <div className="flex flex-col items-center border-l-2 border-l-black">
-            <div>
-              Get solution
-            </div>
-            <div>
-              Sign-up or login for user authentication and security
-            </div>
-          </div>
+            )}
         </div>
+      </div>
+      <div className="mt-10 mx-10">
+
+        this is footer
+
       </div>
     </div>
   );
 }
+
+
+const info =[{
+    title : "Login",
+    discription: "Sign-up or login for user authentication and security! loging in to our website is easy and can be done with both google and github.",
+  },
+  {
+    title : "Select agent",
+    discription: "Select one of our wide range of AI agents with specialized prompting and training for your use! you can use a vide range of agents such as doctor Ai or Accountent Ai which can help you get done a vide range of tasks.",
+  },
+  {
+    title : "Get solution",
+    discription: "Now you can give more information about yourself and your problem. you can provide images and more information to let the agents solve your problem in seconds!",
+  }
+]
