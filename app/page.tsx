@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -42,7 +43,7 @@ export default function Home() {
       <div className="mt-15 ml-10">
         <div className="text-4xl font-bold mt-3">Get started in 3 simple steps!</div>
         <div className="flex flex-row justify-between gap-2 mt-5">
-          { info.map( items => <div className="flex flex-col text-center border-2 border-indigo-600 w-1/3 px-4" key={items.title}>
+          { info.map( items => <div className="flex flex-col text-center border-2 border-indigo-600 rounded-2xl w-1/3 px-4" key={items.title}>
             <div>
                 <div className="text-2xl font-bold">
                   {items.title}
@@ -55,10 +56,30 @@ export default function Home() {
             )}
         </div>
       </div>
-      <div className="mt-10 mx-10">
-
-        this is footer
-
+      <div className="bg-black rounded-t-2xl mt-10 text-white max-w-screen">
+        <div>
+          <div className="pt-10 mx-10 text-sm font-semibold  text-center">
+            are you ready?!
+          </div>
+          <div className="text-3xl font-bold  text-center">Let's Start!</div>
+        </div>
+        <div className="flex flex-row items-center gap-3 pb-10 py-10">
+            <div className="text-2xl font-bold flex flex-col items-center w-1/3">
+              Team RisingDevelopers
+            </div>
+            <div className="flex flex-col items-center w-1/3">
+              <Link href="/dashboard">
+                <button className="border-2 font-bold border-white rounded-4xl p-4 hover:cursor-pointer hover:text-gray-300  hover:border-gray-300">
+                  Our agents
+                </button>
+              </Link>
+            </div>
+            <div className="flex flex-col items-center w-1/3">
+              <Link href="/contact" className=" text-2xl font-bold ml-4">
+                Contact us
+              </Link>
+            </div>
+        </div>
       </div>
     </div>
   );
