@@ -1,3 +1,4 @@
+import BgGradient from "@/components/common/bg-gradient";
 import DashboardSelect from "@/components/general/dashboardSelect";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { use } from "react";
@@ -7,8 +8,9 @@ export default async function Dashboardroute() {
     const user = await getUser();
     return (
         <>
-            <div className="text-4xl font-bold mx-10 mt-5">
-                Hi {user?.given_name}! <span className="text-indigo-600">select your agent!</span>
+            <BgGradient/>
+            <div className="text-4xl text-center font-bold mx-10 mt-10">
+                Hi {user?.given_name}! <span className="text-indigo-600">Choose Your AI Specialist.</span>
             </div>
             <div className="mt-10">
                 <DashboardSelect data={data} />
