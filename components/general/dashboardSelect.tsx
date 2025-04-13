@@ -32,7 +32,7 @@ export default function DashboardSelect({data}:DashboardData) {
 
     return (
         <>    
-        <div className=" w-3/4 m-auto rounded-2xl shadow-lg">
+        <div className=" w-8/10 m-auto rounded-2xl shadow-lg">
             <Slider {...settings} >
                 {data.map( (items,index) =>
                     <div key={index} className="bg-white h-[450px] text-black rounded-xl">
@@ -40,13 +40,15 @@ export default function DashboardSelect({data}:DashboardData) {
                         <img src={items.image} alt={items.name} className="w-44 h-44 rounded-full" />
                         </div>
 
-                        <div className="flex flex-col justify-center items-center gap-4 p-4">
+                        <div className="flex flex-col justify-center items-center gap-4 p-4 mt-1">
                             <Link href={"/dashboard/"+items.id} >
                                 <div className="text-white">
                                     <button className="text-3xl font-bold bg-indigo-600 px-5 pb-1 hover:cursor-pointer hover:bg-indigo-700 rounded-xl">{items.name}</button>
                                 </div>
                             </Link>
-                            <p>{items.description}</p>
+                            <div>
+                                <p className='text-xs font-bold overflow-hidden line-clamp-8'>{items.description}</p>
+                            </div>
                         </div>
                     </div>
                 )}
