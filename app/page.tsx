@@ -123,7 +123,7 @@ export default function Home() {
             )}
         </div>
       </section>
-      <div className="bg-black rounded-t-2xl mt-10 text-white max-w-screen">
+      <div className=" mt-10 text-black max-w-screen">
         <div>
           <div className="pt-10 mx-10 text-sm font-semibold  text-center">
             are you ready?!
@@ -136,7 +136,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center w-1/3">
               <Link href="/dashboard">
-                <button className="border-2 font-bold border-white rounded-4xl p-4 hover:cursor-pointer hover:text-gray-300  hover:border-gray-300">
+                <button className="border-2 font-bold border-black rounded-4xl p-4 hover:cursor-pointer hover:text-gray-500  hover:border-gray-500">
                   Our agents
                 </button>
               </Link>
