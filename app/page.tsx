@@ -127,7 +127,7 @@ export default function Home() {
           <div className="pt-10 mx-10 text-sm font-semibold  text-center">
             are you ready?!
           </div>
-          <div className="text-3xl font-bold  text-center">Let&apos;s Start!</div>
+          <div className="text-3xl font-bold  text-center">Let&apos;s get Started!</div>
         </div>
         <div className="flex flex-row items-center gap-3 pb-10 py-10">
             <div className="text-2xl font-bold flex flex-col items-center w-1/3">
