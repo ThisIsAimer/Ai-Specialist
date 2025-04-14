@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Brain, HandHelping, Rocket, ShieldPlus, WandSparkles } from "lucide-react";
 import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -57,7 +58,6 @@ export default function Home() {
             Whether you're looking for medical advice, exam help, or just someone to talk to, our experts are ready to assist — all from the comfort of your home, instantly.
           </p>
         </div>
-
         <div className=" relative z-10 grid md:grid-cols-3 gap-2 max-w-4xl mx-auto text-left ">
           <div className="p-4">
             <div className="flex items-center justify-center h-24 w-24 mb-4 
@@ -123,10 +123,31 @@ export default function Home() {
             )}
         </div>
       </section>
-      <div className="mt-10 mx-10">
-
-        this is footer
-
+      </div>
+      <div className="bg-black rounded-t-2xl mt-10 text-white max-w-screen">
+        <div>
+          <div className="pt-10 mx-10 text-sm font-semibold  text-center">
+            are you ready?!
+          </div>
+          <div className="text-3xl font-bold  text-center">Let's Start!</div>
+        </div>
+        <div className="flex flex-row items-center gap-3 pb-10 py-10">
+            <div className="text-2xl font-bold flex flex-col items-center w-1/3">
+              Team RisingDevelopers
+            </div>
+            <div className="flex flex-col items-center w-1/3">
+              <Link href="/dashboard">
+                <button className="border-2 font-bold border-white rounded-4xl p-4 hover:cursor-pointer hover:text-gray-300  hover:border-gray-300">
+                  Our agents
+                </button>
+              </Link>
+            </div>
+            <div className="flex flex-col items-center w-1/3">
+              <Link href="/contact" className=" text-2xl font-bold ml-4">
+                Contact us
+              </Link>
+            </div>
+         </div>
       </div>
     </div>
   );
