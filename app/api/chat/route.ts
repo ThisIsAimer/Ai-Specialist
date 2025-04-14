@@ -20,7 +20,7 @@ export async function POST(request: Request) {// when user sends mesg to chat th
                     content: message,
                 },
             ],
-            model: "llama3-8b-8192"
+            model: "meta-llama/llama-4-scout-17b-16e-instruct"
         });
         // using groq obj to send msg to llama model!
         
