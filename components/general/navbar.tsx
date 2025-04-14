@@ -11,7 +11,7 @@ export default async function Navbar() {
 
 
     return (
-        <nav className="mb-2 mt-2 flex items-center justify-between">
+        <nav className="mb-2 mt-4 flex items-center justify-between">
             <div className="flex items-center gap-10">
                 <Link href="/" className="text-2xl font-bold">
                     <span>
@@ -24,12 +24,12 @@ export default async function Navbar() {
             </div>
             <div className="flex flex-row justify-between gap-6">
 
-            <div className="hidden sm:flex items-center gap-6">
-                    <Link href="/" className="text-1xl text-gray-600 font-medium hover:text-indigo-600 transition-colors">
+            <div className="hidden sm:flex items-center gap-6 text-sm">
+                    <Link href="/" className=" transition-colors text-sm duration-200 text-gray-400 hover:text-indigo-500/80">
                         Home
                     </Link>
 
-                    <Link href="/dashboard" className="text-1xl text-gray-600 font-medium hover:text-indigo-600 transition-colors">
+                    <Link href="/dashboard" className="transition-colors text-sm duration-200 text-gray-400 hover:text-indigo-500/80">
                         Dashboard
                     </Link>
 
@@ -42,7 +42,7 @@ export default async function Navbar() {
                     </Avatar>
                     <LogoutLink className={buttonVariants({variant:"secondary"})}>logout</LogoutLink>
                 </div>):
-                (<div className="text-2xl flex items-center gap-4">
+                (<div className="transition-colors text-sm duration-200 text-gray-400 hover:text-indigo-500/80 flex items-center gap-4">
                     <LoginLink className={buttonVariants()}>Login</LoginLink>
                     <RegisterLink className={buttonVariants({variant:"secondary"})}>Sign up</RegisterLink>
                 </div>)}
