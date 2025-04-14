@@ -1,7 +1,7 @@
 import BgGradient from "@/components/common/bg-gradient";
 import DashboardSelect from "@/components/general/dashboardSelect";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { use } from "react";
+
 
 export default async function Dashboardroute() {
     const {getUser} = getKindeServerSession();

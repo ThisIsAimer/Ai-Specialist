@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import Slider from 'react-slick';
+import Image from 'next/image';
 
 interface DashboardItem {
     id: string;
@@ -22,7 +23,7 @@ interface DashboardItem {
 
 
 export default function DashboardSelect({data}:DashboardData) {
-    var settings = {
+    const settings = {
         dots: true,
         infinite: false,
         speed: 500,
@@ -37,7 +38,7 @@ export default function DashboardSelect({data}:DashboardData) {
                 {data.map( (items,index) =>
                     <div key={index} className="bg-white h-[450px] text-black rounded-xl">
                         <div className="h-56 rounded-t-xl bg-indigo-500 flex justify-center items-center">
-                        <img src={items.image} alt={items.name} className="w-44 h-44 rounded-full" />
+                        <Image src={items.image} alt={items.name} className="w-44 h-44 rounded-full" />
                         </div>
 
                         <div className="flex flex-col justify-center items-center gap-4 p-4 mt-1">

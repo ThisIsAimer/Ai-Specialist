@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Brain, HandHelping, Rocket, ShieldPlus, WandSparkles } from "lucide-react";
 import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -51,10 +50,10 @@ export default function Home() {
           <div className=" rounded-full p-2 border border-gray-200 hover:bg-gray-200/50 mb-4">
             <WandSparkles className="w-6 h-6 text-indigo-500 animate-pulse" />
           </div>
-          <h2 className="text-4xl font-bold mb-6">Why We're Different</h2>
+          <h2 className="text-4xl font-bold mb-6">Why We&apos;re Different</h2>
           <p className="max-w-3xl mx-auto text-lg mb-10 text-gray-600">
-            We don’t use just one generic AI. Our platform connects you with <span className="font-semibold text-indigo-600">specialized AI agents</span>, each trained on <span className="font-semibold text-indigo-600">domain-specific data</span> — from healthcare to education to wellness.
-            Whether you're looking for medical advice, exam help, or just someone to talk to, our experts are ready to assist — all from the comfort of your home, instantly.
+            We don&apos;t use just one generic AI. Our platform connects you with <span className="font-semibold text-indigo-600">specialized AI agents</span>, each trained on <span className="font-semibold text-indigo-600">domain-specific data</span> — from healthcare to education to wellness.
+            Whether you&apos;re looking for medical advice, exam help, or just someone to talk to, our experts are ready to assist — all from the comfort of your home, instantly.
           </p>
       </div>
       
@@ -128,7 +127,7 @@ export default function Home() {
           <div className="pt-10 mx-10 text-sm font-semibold  text-center">
             are you ready?!
           </div>
-          <div className="text-3xl font-bold  text-center">Let's Start!</div>
+          <div className="text-3xl font-bold  text-center">Let&apos;s Start!</div>
         </div>
         <div className="flex flex-row items-center gap-3 pb-10 py-10">
             <div className="text-2xl font-bold flex flex-col items-center w-1/3">
