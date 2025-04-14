@@ -40,7 +40,7 @@ export default async function Navbar() {
                         <AvatarImage src={user.picture?.toString()} alt={user.given_name?.toString()} />
                         <AvatarFallback>{user.given_name}</AvatarFallback>
                     </Avatar>
-                    <LogoutLink className={buttonVariants({variant:"secondary"})}>logout</LogoutLink>
+                    <LogoutLink className={buttonVariants({variant:"secondary"})} >logout</LogoutLink>
                 </div>):
                 (<div className="transition-colors text-sm duration-200 text-gray-400 hover:text-indigo-500/80 flex items-center gap-4">
                     <LoginLink className={buttonVariants()}>Login</LoginLink>
