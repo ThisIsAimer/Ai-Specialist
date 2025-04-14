@@ -1,4 +1,5 @@
 'use client'
+import BgGradient from "@/components/common/bg-gradient";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 

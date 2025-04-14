@@ -51,7 +51,7 @@
 }
 
 :root {
-  --background: #c8c8c8;
+  --background: oklch(1 0 0);
   --radius: 0.625rem;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -130,6 +130,36 @@
   body {
     @apply bg-background text-foreground;
   }
+  @keyframes gradient-x {
+    0%,
+    100%{
+      background-size: 200%, 100%;
+      background-position: left center;
+    }
+    50%{
+      background-size: 200%, 100%;
+      background-position: right center;
+    }
+  }
+  
+  .animate-gradient-x{
+    animation: gradient-x 3s ease infinite;
+  }
+}
+@keyframes gradient-x {
+  0%,
+  100%{
+    background-size: 200%, 100%;
+    background-position: left center;
+  }
+  50%{
+    background-size: 200%, 100%;
+    background-position: right center;
+  }
+}
+
+.animate-gradient-x{
+  animation: gradient-x 3s ease infinite;
 }
 
 /* set the slider at dashboard */

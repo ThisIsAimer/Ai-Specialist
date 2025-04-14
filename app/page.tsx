@@ -1,50 +1,117 @@
+import BgGradient from "@/components/common/bg-gradient";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { ArrowRight, Brain, HandHelping, Rocket, ShieldPlus, WandSparkles } from "lucide-react";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div >
-      <div className= "text-7xl leading-28 text-center font-bold h-full flex justify-center mt-20">
-        <div>
-          AI<span className="px-1"></span>
-          <span className="text-indigo-600 pb-2 bg-indigo-300 rounded-3xl px-3 mb-4">Specialist</span>
-          <span className="px-1"></span>at your finger tips
+    <div>
+
+      <section className="pb-16 text-gray-800 text-center mt-10 mb-14">
+      <BgGradient />
+        <div className= "relative z-10 flex flex-col items-center justify-center text-center pt-32 px-4">
+
+          <h1 className="text-6xl sm:text-7xl font-bold leading-tight mb-6">
+            AI
+            {' '}
+              <span className="relative inline-block">
+                  <span className="relative z-10 px-2">Specialist</span>
+                  <span className="absolute inset-0 bg-indigo-300/40 -rotate-2 rounded-lg transform -skew-y-1"></span>
+              </span>{" "}
+            at your fingertips
+          </h1>
+
+          <h4 className="text-xl sm:text-3xl font-semibold mt-4 max-w-3xl text-gray-800">
+            Use a wide range of AI agents with{' '}
+              <span className="relative inline-block">
+                  <span className="relative z-10 px-2">specialized</span>
+                  <span className="absolute inset-0 bg-indigo-300/40 -rotate-2 rounded-lg transform -skew-y-1"></span>
+              </span>{" "}
+            training for your needs!
+          </h4>
         </div>
-      </div>
-      <div className="text-5xl leading-15 mt-22 font-semibold text-center ml-5 mr-3">
-        Use a wide range of AI agents with<span className="px-1"></span>
-          <span className="text-indigo-600 pb-2 bg-indigo-300 rounded-3xl px-1 mb-4">specialized</span>
-          <span className="px-1"></span>training for your needs!
-      </div>
-      <div className="text-2xl font-semibold mt-20 flex flex-row-reverse mr-37">
-          <Link className="text-indigo-600 hover:text-indigo-800"  href="/dashboard">
-              <button className="border-6 border-indigo-600 hover:border-indigo-800 hover:cursor-pointer border-solid rounded-full px-4 pb-1">
-                <div className="flex flex-row gap-2">
-                  <div>
-                    Try our agents 
-                  </div>
-                  <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mt-2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                    </svg>
-                  </div>
-                </div>  
-              </button>
-          </Link>
-      </div>
-      <div className="mt-20">
-        <div className="pb-1 py-2">
-        <div className="text-4xl font-bold ml-10 mt-3 mb-5">Our approach is unique!</div>
-          <div className="bg-indigo-400 mx-10 pb-2 py-2 px-4 font-semibold rounded-2xl">
-            We’ve trained AI modals that excel in different specialized fields. Each AI agent is trained with specialized data to give the best solutions to your problems all in the comfort of your home.
+        <div className="flex justify-center">
+          <Button variant={'link'} className="text-white mt-6 text-base sm:text-lg lg:text-xl rounded-full px-8 sm:px-10 lg:px-12 py-6 sm:py-7 lg:py-8 lg:mt-16 bg-linear-to-r from-slate-800 to-indigo-600 hover:from-indigo-600 hover:to-slate-800 transition-all duration-200 hover:no-underline shadow-lg">
+            <Link href="/dashboard" className="flex items-center gap-2">
+                <span>
+                    Try Our Agents
+                </span>
+                <ArrowRight/>
+            </Link>
+            </Button>
+
+        </div>
+      </section> 
+
+      <section className="py-16 text-gray-800 text-center mt-10 mb-14">
+      <div className="flex flex-col ml-[300px]"><BgGradient /></div>
+        <div className="flex flex-col items-center relative z-10">
+          <div className=" rounded-full p-2 border border-gray-200 hover:bg-gray-200/50 mb-4">
+            <WandSparkles className="w-6 h-6 text-indigo-500 animate-pulse" />
           </div>
-        </div>
+          <h2 className="text-4xl font-bold mb-6">Why We're Different</h2>
+          <p className="max-w-3xl mx-auto text-lg mb-10 text-gray-600">
+            We don’t use just one generic AI. Our platform connects you with <span className="font-semibold text-indigo-600">specialized AI agents</span>, each trained on <span className="font-semibold text-indigo-600">domain-specific data</span> — from healthcare to education to wellness.
+            Whether you're looking for medical advice, exam help, or just someone to talk to, our experts are ready to assist — all from the comfort of your home, instantly.
+          </p>
       </div>
-      <div className="mt-15 ml-10">
-        <div className="text-4xl font-bold mt-3">Get started in 3 simple steps!</div>
-        <div className="flex flex-row justify-between gap-2 mt-5">
-          { info.map( items => <div className="flex flex-col text-center border-2 border-indigo-600 rounded-2xl w-1/3 px-4" key={items.title}>
-            <div>
+      
+      <div className=" relative z-10 grid md:grid-cols-3 gap-2 max-w-4xl mx-auto text-left ">
+          <div className="p-4">
+            <div className="flex items-center justify-center h-24 w-24 mb-4 
+             rounded-2xl bg-linear-to-br from-indigo-500/10 to-transparent group-hover:from-indigo-500/20 transition-colors">
+              <div className="text-indigo-500">
+                <Brain width={62} height={62} strokeWidth={1.5} />
+              </div>
+            </div>
+            <h4 className="font-bold mb-1 text-xl">Domain Expertise</h4>
+            <p className="text-sm text-gray-600">Each AI is tailored to excel in a specific field.</p>
+          </div>
+
+          <div className="p-4">
+            <div className="flex items-center justify-center h-24 w-24 mb-4 
+             rounded-2xl bg-linear-to-br from-indigo-500/10 to-transparent group-hover:from-indigo-500/20 transition-colors">
+              <div className="text-indigo-500">
+                <HandHelping width={62} height={62} strokeWidth={1.5} />
+              </div>
+            </div>
+            <h4 className="font-bold mb-1 text-xl"> Instant Support</h4>
+            <p className="text-sm text-gray-600">Get real-time support tailored to your needs.</p>
+          </div>
+
+          <div className="p-4">
+            <div className="flex items-center justify-center h-24 w-24 mb-4 
+             rounded-2xl bg-linear-to-br from-indigo-500/10 to-transparent group-hover:from-indigo-500/20 transition-colors">
+              <div className="text-indigo-500">
+                <ShieldPlus width={62} height={62} strokeWidth={1.5} />
+              </div>
+            </div>
+            <h4 className="font-bold mb-1 text-xl"> Expert Knowledge</h4>
+            <p className="text-sm text-gray-600">Our agents are trained on curated datasets by professionals.</p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <section className="py-16 text-gray-800 text-center mt-10 mb-14">
+      <BgGradient />
+        <div className=" relative z-10 flex flex-col items-center mb-16">
+
+          <div className=" rounded-full p-2 border border-gray-200 hover:bg-gray-200/50 mb-4">
+            <Rocket className="w-6 h-6 text-indigo-500 animate-pulse" />
+          </div>
+
+          <h2 className="font-bold text-indigo-700 text-3xl mb-4">HOW IT WORKS</h2>
+          <h3 className="font-bold mx-auto text-4xl max-w-2xl ">Simplify Life with Smart AI in Just three Steps!</h3>
+        </div>
+
+        <div className=" relative z-10 flex flex-row justify-between gap-8 mt-5">
+          {info.map(items =>
+            <div className="relative w-full max-w-lg hover:scale-105 hover:transition-all duration-300 px-4 sm:px-0 bg-gray-50/50 rounded-xl" key={items.title}>
+              <div className={cn("relative flex flex-col h-full gap-4 lg:gap-8 z-10 p-8 border border-gray-500/20 rounded-2xl")}>
                 <div className="text-2xl font-bold">
                   {items.title}
                 </div>
@@ -55,7 +122,7 @@ export default function Home() {
             </div>
             )}
         </div>
-      </div>
+      </section>
       <div className="bg-black rounded-t-2xl mt-10 text-white max-w-screen">
         <div>
           <div className="pt-10 mx-10 text-sm font-semibold  text-center">
@@ -88,14 +155,14 @@ export default function Home() {
 
 const info =[{
     title : "Login",
-    discription: "Sign-up or login for user authentication and security! loging in to our website is easy and can be done with both google and github.",
+    discription: "Sign up or log in securely with Google or GitHub — it only takes a few seconds to get started."
   },
   {
-    title : "Select agent",
-    discription: "Select one of our wide range of AI agents with specialized prompting and training for your use! you can use a vide range of agents such as doctor Ai or Accountent Ai which can help you get done a vide range of tasks.",
+    title : "Choose an AI Specialist",
+    discription: "Pick from a variety of specialized AI agents trained for specific tasks — like Doctor AI, Teacher AI, or Accountant AI — each crafted to help you in their area of expertise.",
   },
   {
-    title : "Get solution",
-    discription: "Now you can give more information about yourself and your problem. you can provide images and more information to let the agents solve your problem in seconds!",
+    title : " Share Your Problem & Get Solutions",
+    discription: "Tell the agent about your situation. You can chat, upload images, or describe the issue — and get instant, tailored help in just moments.",
   }
 ]
